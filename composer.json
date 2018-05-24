@@ -9,6 +9,7 @@
         }
     ],
     "require": {
+        "php":"^7.2",
         "guzzlehttp/guzzle": "^6.3",
         "symfony/console": "^4.0",
         "symfony/finder": "^4.0",
@@ -30,6 +31,7 @@
     "bin" : [
       "repos"
     ],
+    "minimum-stability": "dev",
     "prefer-stable": true,
     "config" : {
         "sort-packages": true,
