@@ -49,6 +49,8 @@ if this directory is not exists, it will be auto created.
 $ repos run laravel -d ~/Desktop/testing
 ```
 
+[![Command line Running](image/running.png)]
+
 ## Why
 
 To be honest I just built this so that I can download all the public repos without going 
