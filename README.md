@@ -42,11 +42,11 @@ $ repos run <user> -d <directory>
 ```
 
 Replace the _user_ with the user name and _directory_ with the directoy you want to have all your data,
-for example the following command will clone all the public repositories for *laravel* on my desktop on a directory called *testing*
+for example the following command will clone all the public repositories for *illuminate* on my desktop on a directory called *testing-global*
 if this directory is not exists, it will be auto created.
 
 ```
-$ repos run laravel -d ~/Desktop/testing
+$ repos run illuminate -d ~/Desktop/testing-global
 ```
 
 [![Command line Running](image/running.png)]
