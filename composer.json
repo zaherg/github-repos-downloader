@@ -1,0 +1,38 @@
+{
+    "name": "damascene/repos-downloader",
+    "description": "A small CLI application to download ALL public git repo for specific user on github",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Zaher Ghaibeh",
+            "email": "z@zah.me"
+        }
+    ],
+    "require": {
+        "guzzlehttp/guzzle": "^6.3",
+        "symfony/console": "^4.0",
+        "symfony/finder": "^4.0",
+        "symfony/process": "^4.0"
+    },
+    "require-dev": {
+        "friendsofphp/php-cs-fixer": "^2.11",
+        "squizlabs/php_codesniffer": "@stable"
+    },
+    "scripts": {
+        "phpcs": "php vendor/bin/phpcs src --report=full --no-cache --standard=PSR1,PSR2",
+        "fix" : "php vendor/bin/php-cs-fixer fix --using-cache=no --config=.php_cs"
+    },
+    "autoload": {
+        "psr-4": {
+            "Downloader\\" : "src"
+        }
+    },
+    "bin" : ["bin/downloader"],
+    "prefer-stable": true,
+    "config" : {
+        "sort-packages": true,
+        "preferred-install": "dist",
+        "optimize-autoloader": true
+    }
+}
