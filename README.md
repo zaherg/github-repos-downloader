@@ -1,0 +1,51 @@
+# GitHub Repos Downloader
+> a fun project to download a full list of all the public repos for a github user
+
+This project has only one main idea is to download all the public repos for specific github user.
+
+## Requirements
+1. PHP 7.2
+1. Composer
+1. Git
+
+## Installation
+
+1. Clone the repository
+
+```
+$ git clone https://github.com/linuxjuggler/github-repos-downloader.git
+```
+
+2. Run Composer
+
+```
+$ composer install
+```
+
+3. Run the clone command
+
+First you need to decide which user's repositories you want to clone
+Second run the command:
+
+```
+$ php bin/downloader run <user> -d <directory>
+```
+
+Replace the _user_ with the user name and _directory_ with the directoy you want to have all your data,
+for example the following command will clone all the public repositories for *laravel* on my desktop on a directory called *testing*
+if this directory is not exists, it will be auto created.
+
+```
+$ php bin/downloader run laravel -d ~/Desktop/testing
+```
+
+## Why
+
+To be honest I just built this so that I can download all the public repos without going 
+over each and every one to clone them one by one.
+So this is only built for educational purpose, for example, in the next few months am planning to dive more into Illuminate 
+packages, so this will help me to download them all not one by one.
+
+## TODO
+
+Add the ability to _pull_ the new updates instead of reclone them again.
