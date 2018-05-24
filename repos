@@ -2,7 +2,7 @@
 
 <?php
 
-require __DIR__.'/../bootstrap/app.php';
+require __DIR__.'/bootstrap/app.php';
 
 use Downloader\Downloader;
 use Symfony\Component\Console\Application;
@@ -10,7 +10,7 @@ use Symfony\Component\Console\Application;
 $app = new Application('Github repos downloader', '0.0.1');
 // Config related commands
 
-$app->add(new Downloader);
+$app->add(new Downloader());
 
 $app->setAutoExit(true);
 $app->run();
