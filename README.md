@@ -22,13 +22,23 @@ $ git clone https://github.com/linuxjuggler/github-repos-downloader.git
 $ composer install
 ```
 
-3. Run the clone command
+## Global Installation
 
-First you need to decide which user's repositories you want to clone
-Second run the command:
+If you want you can install the package globally using composer
 
 ```
-$ php bin/downloader run <user> -d <directory>
+$ composer global require damascene/repos-downloader
+```
+
+# Usage cases
+
+1. Run the clone command
+
+First you need to decide which user's repositories you want to clone
+Second run the command (if you have clone it you should run the command from within the directory):
+
+```
+$ repos run <user> -d <directory>
 ```
 
 Replace the _user_ with the user name and _directory_ with the directoy you want to have all your data,
@@ -36,7 +46,7 @@ for example the following command will clone all the public repositories for *la
 if this directory is not exists, it will be auto created.
 
 ```
-$ php bin/downloader run laravel -d ~/Desktop/testing
+$ repos run laravel -d ~/Desktop/testing
 ```
 
 ## Why
