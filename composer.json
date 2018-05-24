@@ -1,7 +1,6 @@
 {
     "name": "damascene/repos-downloader",
     "description": "A small CLI application to download ALL public git repo for specific user on github",
-    "type": "project",
     "license": "MIT",
     "authors": [
         {
