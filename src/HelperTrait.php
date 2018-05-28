@@ -34,7 +34,11 @@ trait HelperTrait
             exit;
         }
 
-        $this->consoleOutput->text('This user has <info>'.$lastPage.'</info> '.($lastPage > 1 ? 'pages.' : 'page.'));
+        if ($lastPage > 1) {
+            $this->consoleOutput->text('This user has <info>'.$lastPage.'</info> pages.');
+        } else {
+            $this->consoleOutput->text('This is the last page.');
+        }
 
         $data = json_decode((string) $request->getBody(), true);
 
