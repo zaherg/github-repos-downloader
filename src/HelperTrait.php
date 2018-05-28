@@ -34,6 +34,8 @@ trait HelperTrait
             exit;
         }
 
+        $this->consoleOutput->text('This user has <info>'.$lastPage.'</info> page.');
+
         $data = json_decode((string) $request->getBody(), true);
 
         if (0 === JSON_ERROR_NONE) {
