@@ -27,14 +27,14 @@ trait HelperTrait
 
         $lastPage = $this->getLastPage($request->getHeader('link')[0]);
 
-        if ($lastPage !== $page && $page > $lastPage) {
+        if ($lastPage !== $page && $page > $lastPage && 1 !== $lastPage) {
             $this->consoleOutput->error('The page you are requesting is bigger than the last page, last page '.
             'should not be greater than '.$lastPage);
 
             exit;
         }
 
-        $this->consoleOutput->text('This user has <info>'.$lastPage.'</info> page.');
+        $this->consoleOutput->text('This user has <info>'.$lastPage.'</info> '.($lastPage > 1 ? 'pages.' : 'page.'));
 
         $data = json_decode((string) $request->getBody(), true);
 
