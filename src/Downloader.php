@@ -33,6 +33,12 @@ class Downloader extends Command
                 'The page number',
                 1
             )
+            ->addOption(
+                'exclude',
+                'e',
+                InputOption::VALUE_OPTIONAL,
+                'Comma separated value for the repos to exclude'
+            )
             ->addArgument('user', InputOption::VALUE_REQUIRED, 'The username for the github user.')
             ->setDescription('You can use this command to start download all public repos');
     }
@@ -67,10 +73,14 @@ class Downloader extends Command
 
         $this->mkdir($input->getOption('directory'));
 
-        array_map(function ($repo) use ($input) {
-            $command = sprintf('cd %s && git clone %s', $input->getOption('directory'), $repo);
+        $exclude = array_map('mb_strtolower', explode(',', $input->getOption('exclude')));
 
-            (new Process())->execute($command, $this->consoleOutput);
+        array_map(function ($repo) use ($input, $exclude) {
+            if (!\in_array(mb_strtolower(\basename($repo)), $exclude, true)) {
+                $command = sprintf('cd %s && git clone %s', $input->getOption('directory'), $repo);
+
+                (new Process())->execute($command, $this->consoleOutput);
+            }
         }, $repos);
 
         $finishMsg = sprintf(

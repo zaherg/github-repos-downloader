@@ -55,7 +55,7 @@ trait HelperTrait
     {
         $fileSystem = new Filesystem();
 
-        if (!\mkdir($directory) && !\is_dir($directory)) {
+        if (!\is_dir($directory)) {
             $fileSystem->mkdir($directory);
         }
     }

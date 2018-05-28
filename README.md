@@ -38,7 +38,7 @@ First you need to decide which user's repositories you want to clone
 Second run the command (if you have clone it you should run the command from within the directory):
 
 ```
-$ repos run <user> -d <directory>
+$ repos run <user> -d <directory> -p <pageNumber> -e <excluded_repo1>.<excluded_repo2>
 ```
 
 Replace the _user_ with the user name and _directory_ with the directoy you want to have all your data,
