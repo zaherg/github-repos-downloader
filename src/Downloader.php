@@ -71,7 +71,11 @@ class Downloader extends Command
 
         $repos = $this->get($user, $input->getOption('page'));
 
-        $this->mkdir($input->getOption('directory'));
+        if ($input->hasOption('directory')) {
+            $this->mkdir($input->getOption('directory'));
+        } else {
+            $this->mkdir($user);
+        }
 
         $exclude = array_map('mb_strtolower', explode(',', $input->getOption('exclude')));
 
