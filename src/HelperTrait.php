@@ -25,7 +25,11 @@ trait HelperTrait
     {
         $request = $this->request($user, $page);
 
-        $lastPage = $this->getLastPage($request->getHeader('link')[0]);
+        $lastPage = 1;
+
+        if (count($request->getHeader('link'))) {
+            $lastPage = $this->getLastPage($request->getHeader('link')[0]);
+        }
 
         if ($lastPage !== $page && $page > $lastPage && 1 !== $lastPage) {
             $this->consoleOutput->error('The page you are requesting is bigger than the last page, last page '.
