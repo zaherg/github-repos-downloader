@@ -32,7 +32,7 @@ $ composer global require damascene/repos-downloader
 
 ## Using PHAR file
 
-You have to download the phar file from the [release](https://github.com/zaherg/github-repos-downloader/releases) tab
+You have to download the phar file from the [releases](https://github.com/zaherg/github-repos-downloader/releases) tab
 
 # Usage cases
 
