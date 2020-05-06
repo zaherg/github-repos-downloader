@@ -7,7 +7,7 @@ require __DIR__.'/../src/bootstrap.php';
 use Downloader\Downloader;
 use Symfony\Component\Console\Application;
 
-$app = new Application('Github repos downloader', '0.1.1');
+$app = new Application('Github repos downloader', '0.1.2');
 // Config related commands
 
 $app->add(new Downloader());
