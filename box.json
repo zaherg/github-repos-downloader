@@ -14,5 +14,5 @@
     "files": [
         "composer.json"
     ],  
-    "output" : "build/repo"
+    "output" : "build/repos"
 }
