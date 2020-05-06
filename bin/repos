@@ -2,12 +2,12 @@
 
 <?php
 
-require __DIR__.'/../src/bootstrap/app.php';
+require __DIR__.'/../src/bootstrap.php';
 
 use Downloader\Downloader;
 use Symfony\Component\Console\Application;
 
-$app = new Application('Github repos downloader', '0.0.8');
+$app = new Application('Github repos downloader', '0.1.0');
 // Config related commands
 
 $app->add(new Downloader());

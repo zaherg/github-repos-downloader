@@ -13,6 +13,6 @@
     "exclude-composer-files": false,    
     "files": [
         "composer.json"
-    ],
+    ],  
     "output" : "build/repo"
 }
