@@ -1,0 +1,66 @@
+# https://help.github.com/en/categories/automating-your-workflow-with-github-actions
+
+name: "Continuous Release"
+
+on:
+  push:
+    tags:
+      - "**"
+
+jobs:
+  release:
+    name: "Release"
+
+    runs-on: "ubuntu-latest"
+
+    strategy:
+      fail-fast: true
+      max-parallel: 15
+      matrix:
+        php-versions: ['7.4']
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: ${{ matrix.php-versions }}
+
+      - name: Cache dependencies
+        uses: actions/cache@v1
+        with:
+          path: ~/.composer/cache/files
+          key: php-${{ matrix.php-versions }}-composer-${{ hashFiles('composer.json') }}          
+
+      - name: Composer install
+        run: composer install --prefer-dist --no-progress --no-suggest
+
+      - name: Install additional dependencies
+        run: composer require --prefer-dist --no-progress --no-suggest league/flysystem league/flysystem-aws-s3-v3 spatie/flysystem-dropbox
+      
+      - name: Build project
+        run: composer run build
+
+      - name: Create release
+        id: create_release
+        uses: actions/create-release@master
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          draft: false
+          prerelease: false
+          release_name: ${{ github.ref }}
+          tag_name: ${{ github.ref }}
+
+      - name: Upload Release Asset
+        id: upload-release-asset 
+        uses: actions/upload-release-asset@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          upload_url: ${{ steps.create_release.outputs.upload_url }}
+          asset_path: ./build/backup
+          asset_name: backup
+          asset_content_type: application/zip

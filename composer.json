@@ -5,7 +5,7 @@
     "authors": [
         {
             "name": "Zaher Ghaibeh",
-            "email": "z@zah.me"
+            "email": "zaher@zah.me"
         }
     ],
     "require": {
@@ -17,11 +17,13 @@
     },
     "require-dev": {
         "friendsofphp/php-cs-fixer": "^2.11",
-        "squizlabs/php_codesniffer": "@stable"
+        "squizlabs/php_codesniffer": "@stable",
+        "humbug/box": "^3.8"
     },
     "scripts": {
         "phpcs": "php vendor/bin/phpcs src --report=full --no-cache --standard=PSR1,PSR2",
-        "fix" : "php vendor/bin/php-cs-fixer fix --using-cache=no --config=.php_cs"
+        "fix" : "php vendor/bin/php-cs-fixer fix --using-cache=no --config=.php_cs",
+        "build": "php -d phar.readonly=false ./vendor/bin/box compile"
     },
     "autoload": {
         "psr-4": {
@@ -29,7 +31,7 @@
         }
     },
     "bin" : [
-      "repos"
+      "bin/repos"
     ],
     "minimum-stability": "dev",
     "prefer-stable": true,
