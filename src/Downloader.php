@@ -40,7 +40,7 @@ class Downloader extends Command
                 'Comma separated value for the repos to exclude'
             )
             ->addArgument('user', InputOption::VALUE_REQUIRED, 'The username for the github user.')
-            ->setDescription('You can use this command to start download all public repos');
+            ->setDescription('You can use this command to start downloading all public repos');
     }
 
     protected function initialize(InputInterface $input, OutputInterface $output)
