@@ -30,6 +30,10 @@ If you want you can install the package globally using composer
 $ composer global require damascene/repos-downloader
 ```
 
+## Using PHAR file
+
+You have to download the phar file from the [release](https://github.com/zaherg/github-repos-downloader/releases) tab
+
 # Usage cases
 
 1. Run the clone command
