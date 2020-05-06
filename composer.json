@@ -9,9 +9,10 @@
         }
     ],
     "require": {
-        "php":"^7.2",
+        "php": "^7.2",
         "guzzlehttp/guzzle": "^6.3",
         "symfony/console": "^4.0",
+        "symfony/filesystem": "^4.0",
         "symfony/finder": "^4.0",
         "symfony/process": "^4.0"
     },
