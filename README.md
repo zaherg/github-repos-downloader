@@ -1,4 +1,5 @@
-# GitHub Repos Downloader
+# GitHub Repos Downloader  [![](https://img.shields.io/badge/sponsor-using%20BTC%20lightning%20network-blue.svg)](https://tippin.me/@zaherg)
+
 > a fun project to download a full list of all the public repos for a github user
 
 This project has only one main idea is to download all the public repos for specific github user.
