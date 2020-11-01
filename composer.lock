@@ -2886,12 +2886,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/JetBrains/phpstorm-stubs.git",
-                "reference": "147255f02ed786e1febaa641f86cfb9f656a3fda"
+                "reference": "5b7def27af1f88c009f137b4c4a38bb4732a3713"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/JetBrains/phpstorm-stubs/zipball/147255f02ed786e1febaa641f86cfb9f656a3fda",
-                "reference": "147255f02ed786e1febaa641f86cfb9f656a3fda",
+                "url": "https://api.github.com/repos/JetBrains/phpstorm-stubs/zipball/5b7def27af1f88c009f137b4c4a38bb4732a3713",
+                "reference": "5b7def27af1f88c009f137b4c4a38bb4732a3713",
                 "shasum": ""
             },
             "require-dev": {
@@ -2923,7 +2923,7 @@
                 "stubs",
                 "type"
             ],
-            "time": "2020-07-28T12:16:34+00:00"
+            "time": "2020-09-14T12:37:46+00:00"
         },
         {
             "name": "justinrainbow/json-schema",
@@ -3714,16 +3714,16 @@
         },
         {
             "name": "squizlabs/php_codesniffer",
-            "version": "3.5.5",
+            "version": "3.5.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/squizlabs/PHP_CodeSniffer.git",
-                "reference": "73e2e7f57d958e7228fce50dc0c61f58f017f9f6"
+                "reference": "9d583721a7157ee997f235f327de038e7ea6dac4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/squizlabs/PHP_CodeSniffer/zipball/73e2e7f57d958e7228fce50dc0c61f58f017f9f6",
-                "reference": "73e2e7f57d958e7228fce50dc0c61f58f017f9f6",
+                "url": "https://api.github.com/repos/squizlabs/PHP_CodeSniffer/zipball/9d583721a7157ee997f235f327de038e7ea6dac4",
+                "reference": "9d583721a7157ee997f235f327de038e7ea6dac4",
                 "shasum": ""
             },
             "require": {
@@ -3761,7 +3761,7 @@
                 "phpcs",
                 "standards"
             ],
-            "time": "2020-04-17T01:09:41+00:00"
+            "time": "2020-10-23T02:01:07+00:00"
         },
         {
             "name": "symfony/deprecation-contracts",
@@ -4551,9 +4551,7 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": {
-        "squizlabs/php_codesniffer": 0
-    },
+    "stability-flags": [],
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
