@@ -422,16 +422,16 @@
         },
         {
             "name": "symfony/finder",
-            "version": "v4.4.16",
+            "version": "v4.4.17",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/finder.git",
-                "reference": "26f63b8d4e92f2eecd90f6791a563ebb001abe31"
+                "reference": "9f1d1d883b79a91ef320c0c6e803494e042ef36e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/finder/zipball/26f63b8d4e92f2eecd90f6791a563ebb001abe31",
-                "reference": "26f63b8d4e92f2eecd90f6791a563ebb001abe31",
+                "url": "https://api.github.com/repos/symfony/finder/zipball/9f1d1d883b79a91ef320c0c6e803494e042ef36e",
+                "reference": "9f1d1d883b79a91ef320c0c6e803494e042ef36e",
                 "shasum": ""
             },
             "require": {
@@ -476,7 +476,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2020-10-24T11:50:19+00:00"
+            "time": "2020-11-17T19:45:34+00:00"
         },
         {
             "name": "symfony/polyfill-intl-idn",
@@ -2887,18 +2887,18 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/JetBrains/phpstorm-stubs.git",
-                "reference": "5b7def27af1f88c009f137b4c4a38bb4732a3713"
+                "reference": "c2d2a1e974ac0662fc260e109b867e23cca60c0d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/JetBrains/phpstorm-stubs/zipball/5b7def27af1f88c009f137b4c4a38bb4732a3713",
-                "reference": "5b7def27af1f88c009f137b4c4a38bb4732a3713",
+                "url": "https://api.github.com/repos/JetBrains/phpstorm-stubs/zipball/c2d2a1e974ac0662fc260e109b867e23cca60c0d",
+                "reference": "c2d2a1e974ac0662fc260e109b867e23cca60c0d",
                 "shasum": ""
             },
             "require-dev": {
                 "friendsofphp/php-cs-fixer": "^2.16",
-                "nikic/php-parser": "^4",
-                "php": "^7.4",
+                "nikic/php-parser": "dev-master",
+                "php": "^8.0",
                 "phpdocumentor/reflection-docblock": "dev-master",
                 "phpunit/phpunit": "^9"
             },
@@ -2924,7 +2924,7 @@
                 "stubs",
                 "type"
             ],
-            "time": "2020-09-14T12:37:46+00:00"
+            "time": "2020-11-30T13:55:17+00:00"
         },
         {
             "name": "justinrainbow/json-schema",
@@ -4477,7 +4477,9 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": [],
+    "stability-flags": {
+        "squizlabs/php_codesniffer": 0
+    },
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
