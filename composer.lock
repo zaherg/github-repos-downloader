@@ -866,16 +866,16 @@
         },
         {
             "name": "symfony/process",
-            "version": "v4.4.17",
+            "version": "v4.4.18",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/process.git",
-                "reference": "ec1482f13d53911a8a32e54ba6f9a3b43a57d943"
+                "reference": "075316ff72233ce3d04a9743414292e834f2cb4a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/process/zipball/ec1482f13d53911a8a32e54ba6f9a3b43a57d943",
-                "reference": "ec1482f13d53911a8a32e54ba6f9a3b43a57d943",
+                "url": "https://api.github.com/repos/symfony/process/zipball/075316ff72233ce3d04a9743414292e834f2cb4a",
+                "reference": "075316ff72233ce3d04a9743414292e834f2cb4a",
                 "shasum": ""
             },
             "require": {
@@ -920,7 +920,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2020-11-02T15:10:16+00:00"
+            "time": "2020-12-08T16:59:59+00:00"
         },
         {
             "name": "symfony/service-contracts",
@@ -2954,20 +2954,20 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/JetBrains/phpstorm-stubs.git",
-                "reference": "c2d2a1e974ac0662fc260e109b867e23cca60c0d"
+                "reference": "4ab97e9e1797a92596374ee57a8b2250a6c13fed"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/JetBrains/phpstorm-stubs/zipball/c2d2a1e974ac0662fc260e109b867e23cca60c0d",
-                "reference": "c2d2a1e974ac0662fc260e109b867e23cca60c0d",
+                "url": "https://api.github.com/repos/JetBrains/phpstorm-stubs/zipball/4ab97e9e1797a92596374ee57a8b2250a6c13fed",
+                "reference": "4ab97e9e1797a92596374ee57a8b2250a6c13fed",
                 "shasum": ""
             },
             "require-dev": {
-                "friendsofphp/php-cs-fixer": "^2.16",
-                "nikic/php-parser": "dev-master",
+                "jetbrains/phpstorm-attributes": "@stable",
+                "nikic/php-parser": "@stable",
                 "php": "^8.0",
-                "phpdocumentor/reflection-docblock": "dev-master",
-                "phpunit/phpunit": "^9"
+                "phpdocumentor/reflection-docblock": "@stable",
+                "phpunit/phpunit": "@stable"
             },
             "type": "library",
             "autoload": {
@@ -2991,7 +2991,7 @@
                 "stubs",
                 "type"
             ],
-            "time": "2020-11-30T13:55:17+00:00"
+            "time": "2020-12-28T16:44:46+00:00"
         },
         {
             "name": "justinrainbow/json-schema",
